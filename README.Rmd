@@ -1,0 +1,49 @@
+---
+title: "README"
+author: "John Kennedy"
+date: "Sunday, February 14, 2016"
+output: word_document
+---
+
+ 
+ 
+ 
+First install the reshape2 package containing melt features.
+
+
+The first if statement will download the entire dataset from the website.
+
+The second if statement will unzip the file.
+
+Read the activity labels and features from the files.
+
+Search (grep) for any feature that contains "-mean" and -std", and swap in names "Mean" and "STD".
+
+Use "featuresWanted" logical vector to select rows with mean or std data.
+
+Select the same rows of training and test datasets using the same "featuresWanted" logical vector.
+
+cbind test and training subjects and activities variables into two datasets "test" and "train".
+
+Both test and train sets have same number of columns: use rbind to combine them into one dataset "compltData".
+
+Name the 81 variables in the compltData set.
+
+Configure the "activity" variable as a factor variable with 6 levels: "WALKING", "WALKING_UPSTAIRS" etc.
+
+Also configure "Subject" variable as factor variable.
+
+Now "melt" the dataset by subject and activity, where the 75 variables are not melted into one column "variable".
+
+Now reshape the melted dataset into a dataframe using dcast from the reshape2 package with the argument "mean" to select the mean values.
+
+Save to disc as "tidy.txt"
+
+
+
+
+
+
+
+ 
+
